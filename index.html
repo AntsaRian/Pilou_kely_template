@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏠 Home</title>
+  <style>
+    * {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-image: url('assets/images/19.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 100vh;
+      overflow-x: hidden; 
+    }
+
+    .nav1 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 10px 60px;
+        background-color: darkblue;
+        color: aliceblue;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .nav1-links {
+        margin-left: auto; 
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav1 a {
+        color: aliceblue;
+        text-decoration: none;
+    }
+
+
+    .nav2 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(228, 233, 237);
+      height: 120px;
+      padding: 0 40px;
+      position: sticky;
+      top: 0; 
+      z-index: 2;
+    }
+
+    .nav2 a {
+      text-decoration: none;
+    }
+
+    .logo {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-right: auto;
+    }
+
+    .nav2_right-links {
+      display: flex;
+      gap: 20px;
+      margin-left: auto;
+    }
+
+    .langue {
+      border: 1px solid black;
+      padding: 5px 11px;
+      border-radius: 17px;
+    }
+
+    .report {
+      border: 3px solid darkblue;
+      padding: 8px 13px;
+    }
+
+    .section_titre {
+      margin-left: 80px;
+      margin-top: 100px;
+      color: aliceblue;
+    }
+
+    .section_titre h1 {
+      font-size: 40px;
+    }
+
+    .section_titre button {
+      margin-top: 20px;
+      color: aliceblue;
+      font-size: 19px;
+      border: none;
+      background-color: orangered;
+      padding: 15px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .img_content {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .img_content div {
+        background-image: url('assets/images/19.jpg');
+        background-color: aliceblue;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 150px;
+        height: auto;
+    }
+
+    .img_content img {
+        width: 120px;
+        height: auto;
+    }
+
+    .section_images {
+      margin-top: 100px;
+      display: flex;
+      gap: 30px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 100px;
+
+      scrollbar-width: none; /* Firefox */
+    }
+    .section_images::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
+    }
+
+    .images_div {
+      width: 300px;
+      height: 250px;
+      background-image: url('assets/images/20.jpeg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+      border-radius: 5px;
+      flex-shrink: 0;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .section_images_desc {
+      background: rgba(3, 1, 16, 0.525);
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      color: white;
+      text-align: left;
+      padding-top: 90px;
+    }
+
+  .section_images_h1 {
+    position: relative;
+    top: 100px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  footer {
+      margin-top: 150px;
+      background-color: rgba(7, 7, 7, 0.37);
+      color: aliceblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 150px;
+      height: 350px;
+      flex-wrap: wrap;
+      backdrop-filter: blur(30px);
+    }
+
+    footer div {
+      padding: 50px;
+      flex: 300px;
+      text-align: center;
+    }
+
+    .footer_copy {
+      position: relative;
+      bottom: 150px;
+    }
+
+    /* ========================= */
+    /* 📱 Responsive Mobile CSS */
+    /* ========================= */
+    @media screen and (max-width: 500px) {
+      .nav1 {
+        display: none;
+      }
+
+      .nav2 {
+        flex-direction: row;
+        padding: 25px;
+        height: auto;
+        gap: 10px;
+      }
+
+      .home, .pages, .departement, .event, .blog, .portfolio, .contact {
+        display: none;
+      } 
+
+      .nav2_right-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0;
+        color: antiquewhite;
+      }
+
+      .section_titre h1 {
+        font-size: 30px;
+      }
+
+      .section_titre h3 {
+        font-size: 16px;
+      }
+
+      .section_titre button {
+        font-size: 14px;
+        padding: 10px 14px;
+      }
+
+      .section_images_h1 {
+        font-size: 24px;
+      }
+
+      .images_div {
+        min-width: 200px;
+        height: 180px;
+      }
+
+      .section_images_desc h2 {
+        font-size: 16px;
+      }
+
+      .section_images_desc h4,
+      .section_images_desc h6 {
+        font-size: 14px;
+      }
+
+      footer {
+        flex-direction: row;
+        height: 100%;
+        gap: 0;
+        text-align: center;
+      }
+
+      .footer_copy {
+        position: relative;
+        bottom: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1>https://antsarian.github.io/Pilou_kely_template/</h1>
+    <nav class="nav1">
+        <p>📲 Call on: 034 28 613 18</p>
+        <p>⏰ Open hours: Mon - Fri 8:00 am - 06:00 pm</p>
+
+        <div class="nav1-links">
+            <a href="#">Counoil</a>
+            <a href="#">Vacancies</a>
+            <a href="#">Companies</a>
+        </div>
+    </nav>
+
+
+  <nav class="nav2">
+    <div class="logo">
+      <img src="assets/icons/chick.png" width="50" height="50" alt="logo" />
+      <b><p class="nav2-logo"><span style="color: rgb(241, 177, 14);">Pilou</span> kely</p></b>
+    </div>
+    <a href="#" class="home">Home</a>
+    <a href="#" class="pages">Pages</a>
+    <a href="#" class="departement">Departement</a>
+    <a href="#" class="event">Event</a>
+    <a href="#" class="blog">Blog</a>
+    <a href="#" class="portfolio">Portfolio</a>
+    <a href="#" class="contact">Contact</a>
+    <img src="assets/icons/bx-search-alt.svg" width="30" height="30" alt="search" />
+    <div class="nav2_right-links">
+      <a href="#" class="langue">Eng</a>
+      <a href="#" class="report">Report an issues</a>
+    </div>
+  </nav>
+
+  <section class="section_titre">
+    <h1>Karibo eto aminay ianareo</h1>
+    <h1>Akory aby e !</h1>
+    <h3>tranon-kala nianarana css (front-end)</h3>
+    <div class="section_titre_bouton">
+      <button>Discover more ...</button>
+    </div>
+  </section>
+
+  <h1 class="section_images_h1">Découvrez un autre monde</h1>
+  <section class="section_images">
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+    <div class="images_div">
+      <div class="section_images_desc">
+        <h2>Iarivo</h2>
+        <h4>Lorem ipsum</h4>
+        <h6>⭐⭐⭐⭐⭐</h6>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_email">
+      <h3>📲 Email</h3>
+      <p>andrianina2antsa@gmail.com</p>
+      <p>antsarian613@gmail.com</p>
+      <p>ituniversity@moov.mg</p>
+    </div>
+    <div class="footer_contact">
+      <h3>☎️ Contact</h3>
+      <p>032 57 371 78</p>
+      <p>034 28 613 18</p>
+      <p>033 73 527 71</p>
+    </div>
+    <div class="footer_adresse">
+      <h3>🏠 Adresse</h3>
+      <p>Andoharanofotsy - Madagascar</p>
+      <p>Antananarivo - Madagascar</p>
+    </div>
+    <p class="footer_copy">&copy; 2025 - Fianarana front-end</p>
+  </footer>
+</body>
+</html>
